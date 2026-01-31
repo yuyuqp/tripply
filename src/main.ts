@@ -404,38 +404,71 @@ const renderItinerary = () => `
     <div class="status-chip">Barcelona · 5 days</div>
   </section>
   <section class="section">
-    <div class="itinerary-grid">
-      <div class="card">
-        <h3>Day 1 · Arrival</h3>
-        <ul class="agenda">
-          <li>Hotel check-in + rooftop welcome tea</li>
-          <li>Evening tapas crawl (vegan menu)</li>
-          <li>Sunset walk at Barceloneta</li>
-        </ul>
+    <div class="itinerary-layout">
+      <div class="card itinerary-map">
+        <div class="map-header">
+          <h3>Route overview</h3>
+          <span class="tag">Map sync</span>
+        </div>
+        <div class="map-canvas" role="img" aria-label="Barcelona itinerary map with four day stops pinned.">
+          <span class="map-pin pin-1"><span class="pin-label">1</span></span>
+          <span class="map-pin pin-2"><span class="pin-label">2</span></span>
+          <span class="map-pin pin-3"><span class="pin-label">3</span></span>
+          <span class="map-pin pin-4"><span class="pin-label">4</span></span>
+          <span class="map-route"></span>
+        </div>
+        <div class="map-legend">
+          <div class="legend-item">
+            <span class="legend-pin pin-1"></span>
+            Gothic Quarter arrival
+          </div>
+          <div class="legend-item">
+            <span class="legend-pin pin-2"></span>
+            Eixample art loop
+          </div>
+          <div class="legend-item">
+            <span class="legend-pin pin-3"></span>
+            La Boqueria market
+          </div>
+          <div class="legend-item">
+            <span class="legend-pin pin-4"></span>
+            Costa Brava day trip
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Day 2 · Art & design</h3>
-        <ul class="agenda">
-          <li>Gaudí architecture tour (low-crowd window)</li>
-          <li>Picasso museum with timed entry</li>
-          <li>Late afternoon gallery hop</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Day 3 · Local flavors</h3>
-        <ul class="agenda">
-          <li>Morning market visit + cooking class</li>
-          <li>Siesta + spa break</li>
-          <li>Rooftop dinner with reservations held</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Day 4 · Coastal reset</h3>
-        <ul class="agenda">
-          <li>Scenic train to coastal village</li>
-          <li>Boat tour with low-wind conditions</li>
-          <li>Sea-view dinner swap if crowds rise</li>
-        </ul>
+      <div class="itinerary-grid">
+        <div class="card">
+          <h3>Day 1 · Arrival</h3>
+          <ul class="agenda">
+            <li>Hotel check-in + rooftop welcome tea</li>
+            <li>Evening tapas crawl (vegan menu)</li>
+            <li>Sunset walk at Barceloneta</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 2 · Art & design</h3>
+          <ul class="agenda">
+            <li>Gaudí architecture tour (low-crowd window)</li>
+            <li>Picasso museum with timed entry</li>
+            <li>Late afternoon gallery hop</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 3 · Local flavors</h3>
+          <ul class="agenda">
+            <li>Morning market visit + cooking class</li>
+            <li>Siesta + spa break</li>
+            <li>Rooftop dinner with reservations held</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 4 · Coastal reset</h3>
+          <ul class="agenda">
+            <li>Scenic train to coastal village</li>
+            <li>Boat tour with low-wind conditions</li>
+            <li>Sea-view dinner swap if crowds rise</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

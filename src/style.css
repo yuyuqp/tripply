@@ -237,7 +237,8 @@ main {
 .demo-grid,
 .grid-two,
 .grid-three,
-.itinerary-grid {
+.itinerary-grid,
+.itinerary-layout {
   display: grid;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -261,6 +262,133 @@ main {
 
 .itinerary-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.itinerary-layout {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  align-items: start;
+}
+
+.itinerary-map {
+  display: grid;
+  gap: 1rem;
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.map-canvas {
+  position: relative;
+  border-radius: 20px;
+  padding: 1.5rem;
+  min-height: 280px;
+  background: radial-gradient(circle at 20% 20%, rgba(147, 197, 253, 0.4), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(191, 219, 254, 0.5), transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(226, 232, 240, 0.6), transparent 50%),
+    #e2e8f0;
+  overflow: hidden;
+}
+
+.map-route {
+  position: absolute;
+  inset: 1.75rem;
+  border-radius: 18px;
+  border: 2px dashed rgba(37, 99, 235, 0.5);
+}
+
+.map-pin {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px 12px 12px 0;
+  transform: rotate(-45deg);
+  background: #1d4ed8;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.3);
+}
+
+.map-pin::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.pin-label {
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 1;
+}
+
+.map-pin.pin-1 {
+  top: 24%;
+  left: 20%;
+  background: #0ea5e9;
+}
+
+.map-pin.pin-2 {
+  top: 18%;
+  right: 20%;
+  background: #2563eb;
+}
+
+.map-pin.pin-3 {
+  bottom: 28%;
+  left: 38%;
+  background: #1d4ed8;
+}
+
+.map-pin.pin-4 {
+  bottom: 20%;
+  right: 28%;
+  background: #0f172a;
+}
+
+.map-legend {
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.legend-pin {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #1d4ed8;
+}
+
+.legend-pin.pin-1 {
+  background: #0ea5e9;
+}
+
+.legend-pin.pin-2 {
+  background: #2563eb;
+}
+
+.legend-pin.pin-3 {
+  background: #1d4ed8;
+}
+
+.legend-pin.pin-4 {
+  background: #0f172a;
 }
 
 .card {
@@ -541,6 +669,10 @@ main {
   .nav-cta {
     margin-left: 0;
   }
+
+  .itinerary-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
@@ -558,5 +690,33 @@ main {
 
   .timeline li {
     grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links .nav-link {
+    flex: 1 1 auto;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .prompt-actions,
+  .cta-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .screen-hero {
+    align-items: flex-start;
+  }
+
+  .map-canvas {
+    min-height: 220px;
+    padding: 1.25rem;
   }
 }
