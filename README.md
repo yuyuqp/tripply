@@ -15,6 +15,10 @@ Use the shareable URLs below to jump to specific prototype screens:
 - Logistics command center: `/?screen=logistics`
 - Itinerary preview: `/?screen=itinerary`
 
+## Deployment
+
+The GitHub Actions workflow at `.github/workflows/deploy-pages.yml` builds the Vite app and deploys it to GitHub Pages on every push to `main`. Ensure GitHub Pages is configured to use GitHub Actions as the source.
+
 ## Development
 
 ```bash
